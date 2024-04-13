@@ -1,0 +1,11 @@
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\bin\Debug\CapaProveedor.dll
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\bin\Debug\CapaProveedor.pdb
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\bin\Debug\CapaDatos.dll
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\bin\Debug\CapaEntidad.dll
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\bin\Debug\CapaDatos.pdb
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\bin\Debug\CapaEntidad.pdb
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj\Debug\CapaProveedor.csproj.AssemblyReference.cache
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj\Debug\CapaProveedor.csproj.CoreCompileInputs.cache
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj\Debug\CapaProveedor.csproj.CopyComplete
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj\Debug\CapaProveedor.dll
+C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj\Debug\CapaProveedor.pdb
