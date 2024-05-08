@@ -6,17 +6,24 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Usuarios
+    public class usuarios
     {
-        public int Id_User { get; set; }
-        public string name_user { get; set; }
-        public string Last_nameUser { get; set; }
-        public string email_user { get; set; }
-        public string username { get; set; }
-        public string passw { get; set; }
-        public bool reestablecer { get; set; }
-        public bool activo { get; set; }
 
-       // public tipos_Usuario TipoU { get; set; }
+
+        public int ID_Usuario { get; set; }
+        public string nombre_usuario { get; set; }
+        public string apellido_usuario { get; set; }
+        public string correo_usuario { get; set; }
+        public string contrasena { get; set; }
+        public int tipo_usuario { get; set; } 
+        public string celular_usuario { get; set; }
+        public string num_NIT { get; set; } 
+        public bool reestablecer { get; set; }
+
+        // Agregar una propiedad para el tipo de usuario
+        
+        public tiposUsuario otiposUsuario { get; set; }
+        
+
     }
 }

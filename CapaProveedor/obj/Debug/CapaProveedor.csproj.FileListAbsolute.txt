@@ -9,3 +9,14 @@ C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj
 C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj\Debug\CapaProveedor.csproj.CopyComplete
 C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj\Debug\CapaProveedor.dll
 C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaProveedor\obj\Debug\CapaProveedor.pdb
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\bin\Debug\CapaProveedor.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\bin\Debug\CapaProveedor.pdb
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\bin\Debug\CapaDatos.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\bin\Debug\CapaEntidad.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\bin\Debug\CapaDatos.pdb
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\bin\Debug\CapaEntidad.pdb
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\obj\Debug\CapaProveedor.csproj.AssemblyReference.cache
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\obj\Debug\CapaProveedor.csproj.CoreCompileInputs.cache
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\obj\Debug\CapaProveedor.csproj.CopyComplete
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\obj\Debug\CapaProveedor.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaProveedor\obj\Debug\CapaProveedor.pdb

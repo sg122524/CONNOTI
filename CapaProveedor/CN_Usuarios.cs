@@ -11,10 +11,14 @@ namespace CapaProveedor
 {
     public class CN_Usuarios
     {
-        private CD_Usuarios objCapaDatos = new CD_Usuarios();
-        public List<Usuarios> Listar()
+        private CD_Usuarios objCapaDato = new CD_Usuarios();
+
+
+        public List<usuarios> Listar()
         {
-            return objCapaDatos.Listar();
+            return objCapaDato.Listar();
         }
+
+         
     }
 }

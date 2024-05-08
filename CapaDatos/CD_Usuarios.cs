@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CapaEntidad;
 using System.Data.SqlClient;
 using System.Data;
@@ -11,20 +8,20 @@ namespace CapaDatos
 {
     public class CD_Usuarios
     {
-
-        
-
-        public List<Usuarios> Listar()
+        public List<usuarios> Listar()
         {
-            List<Usuarios> lista = new List<Usuarios>();
-
+            List<usuarios> lista = new List<usuarios>();
             try
             {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn) )
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "select Id_User, name_user, Last_nameUser, email_user, username, passw, TipoU from Usuarios";
+                    string query = @"SELECT u.ID_Usuario, u.nombre_usuario, u.apellido_usuario, u.correo_usuario, u.contrasena, 
+                                    u.tipo_usuario, u.celular_usuario, u.num_NIT, u.reestablecer, tu.descripcion_tipo_usuario 
+                                    FROM Usuarios u 
+                                    INNER JOIN Tipos_Usuario tu ON u.tipo_usuario = tu.id_tipo_usuario";
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
+
                     oconexion.Open();
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
@@ -32,39 +29,33 @@ namespace CapaDatos
                         while (dr.Read())
                         {
                             lista.Add(
-                                new Usuarios()
+                                new usuarios()
                                 {
-                                    Id_User = Convert.ToInt32(dr["Id_User"]),
-                                    name_user = dr["name_user"].ToString(),
-                                    Last_nameUser = dr["Last_nameUser"].ToString(),
-                                    email_user = dr["email_user"].ToString(),
-                                    username = dr["username"].ToString(),
-                                    passw = dr["passw"].ToString()
-                                }
-                                ) ;
+                                    ID_Usuario = Convert.ToInt32(dr["ID_Usuario"]),
+                                    nombre_usuario = dr["nombre_usuario"].ToString(),
+                                    apellido_usuario = dr["apellido_usuario"].ToString(),
+                                    correo_usuario = dr["correo_usuario"].ToString(),
+                                    contrasena = dr["contrasena"].ToString(),
+                                    tipo_usuario = Convert.ToInt32(dr["tipo_usuario"]),
+                                    celular_usuario = dr["celular_usuario"].ToString(),
+                                    num_NIT = dr["num_NIT"].ToString(),
+                                    reestablecer = Convert.ToBoolean(dr["reestablecer"]),
+                                    otiposUsuario = new tiposUsuario()
+                                    {
+                                        ID_Tipo_Usuario = Convert.ToInt32(dr["ID_Tipo_Usuario"]),
+                                        tipo_usuario = dr["tipo_usuario"].ToString()
+                                    }
+                                });
                         }
-
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                lista = new List<Usuarios>();
+                Console.WriteLine("Error: " + ex.Message);
+                lista = new List<usuarios>();
             }
-
-
-
-
-
-
-
-
             return lista;
-
-
-
         }
-
-        
     }
 }

@@ -4,3 +4,9 @@ C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaEntidad\obj\D
 C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\saram\OneDrive\Escritorio\programacion\CONNOTIPROYECT\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CapaEntidad\obj\Debug\CapaEntidad.pdb
