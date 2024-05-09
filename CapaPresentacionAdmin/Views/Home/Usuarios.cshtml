@@ -16,46 +16,137 @@
     <div class="card-body">
         <div class="row">
             <div class="col-12">
-                <button type="button" class="btn btn-success">Crear Nuevo</button>
+                <button type="button" class="btn btn-success" onclick="abrirModal(null)">Crear Nuevo</button>
             </div>
         </div>
+
+        <hr />
+        <table id="tabla" class="display cell-border" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Correo</th>
+                    <th>Celular</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
-
-    <hr />
-    <table id="tabla" class="display cell-border" style="width:100%">
-        <thead>
-            <tr>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Correo</th>
-                <th>Activo</th>
-            </tr>
-        </thead>
-    </table>
-
 
 </div>
 
- @section scripts{
-     <script>
+<div class="modal fade" id="FormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body g-2">
+
+
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+                        <label for="txtnombres" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="txtnombres">
+                    </div>
+
+
+                    <div class="col-sm-6">
+                        <label for="txtapellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="txtapellidos">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="txtcorreo" class="form-label">Correo</label>
+                        <input type="text" class="form-control" id="txtcorreo">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="num" class="form-label">Celular</label>
+                        <input type="number" class="form-control" id="num" >
+                    </div>
+
+                    
+
+                   
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
 
 
          var tablaData
 
-         jQuery.ajax({
+         
 
-             url: '@Url.Action("listarUsuarios", "Home")',
-             type: "GET",
-             dataType: "json",
-             contentType: "application/json; charset= utf-8",
+        tablaData = $("#tabla").DataTable({
 
-             success: function (data) {
-                 
-                 console.log(data);
-             }
-         })
+            responsive: true,
+            ordening: false,
+            "ajax": {
+                url: '@Url.Action("ListarUsuarios", "Home")',
+                type: "GET",
+                dataType: "json"
 
-         tablaData = $("#tabla").DataTable();
-     </script>
-     
-     }
+            },
+            "columns": [
+                { "data": "nombre_usuario" },
+                { "data": "apellido_usuario" },
+                { "data": "correo_usuario" },
+                { "data": "celular_usuario" },
+                {
+                    "defaultContent": ' <button type="button" class="btn btn-primary btn-sm btn-editar"><i class="fas fa-pen"></i></button>' +
+                        ' <button type="button" class="btn btn-danger btn-sm ms-2"><i class="fas fa-trash"></i></button>',
+                    "orderable": false,
+                    "searchable": false,
+                    "width": "90px"
+                }
+            ],
+            "lenguage": {
+                "url": "//cdn.datatables.net/plug-ins/2.0.7/i18n/es-MX.json"
+            }
+        });
+
+        function abrirModal(json) {
+
+            if (json != null) {
+                $("#txtnombres").val(json.nombre_usuario);
+                $("#txtapellidos").val(json.apellido_usuario);
+                $("#txtcorreo").val(json.correo_usuario);
+                $("#num").val(json.celular_usuario);
+                //minuto6:05
+
+            }
+            $("#FormModal").modal("show");
+
+
+
+        }
+
+        $("#tabla tbody").on("click", '.btn-editar', function () {
+
+            var filaSeleccionada = $(this).closest("tr");
+
+            var data = tablaData.row(filaSeleccionada).data();
+            abrirModal(data)
+            
+        })
+
+    </script>
+
+}
