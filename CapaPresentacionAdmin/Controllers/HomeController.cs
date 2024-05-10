@@ -11,6 +11,7 @@ namespace CapaPresentacionAdmin.Controllers
     {
         public ActionResult Index()
         {
+
             return View();
         }
 
@@ -18,8 +19,8 @@ namespace CapaPresentacionAdmin.Controllers
         {
             return View();
         }
-        [HttpGet]
 
+        [HttpGet]
         public JsonResult ListarUsuarios()
         {
             List<usuarios> oLista = new List<usuarios>();

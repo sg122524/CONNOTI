@@ -16,9 +16,9 @@ namespace CapaDatos
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
                     string query = @"SELECT u.ID_Usuario, u.nombre_usuario, u.apellido_usuario, u.correo_usuario, u.contrasena, 
-                                    u.tipo_usuario, u.celular_usuario, u.num_NIT, u.reestablecer, tu.descripcion_tipo_usuario 
+                                    u.tipo_usuario, u.celular_usuario, u.num_NIT, u.reestablecer 
                                     FROM Usuarios u 
-                                    INNER JOIN Tipos_Usuario tu ON u.tipo_usuario = tu.id_tipo_usuario";
+                                    INNER JOIN Tipos_Usuario tu ON u.tipo_usuario = tu.ID_Tipo_Usuario";
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
 
@@ -57,5 +57,5 @@ namespace CapaDatos
             }
             return lista;
         }
-    }
+}
 }
