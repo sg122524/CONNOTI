@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Modelo
 {
-    internal class SubMenu
+    public class SubMenu
     {
         public int IdSubMenu { get; set; }
         public int IdMenu { get; set; }

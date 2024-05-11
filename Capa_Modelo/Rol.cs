@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Modelo
 {
-    internal class Rol
+    public class Rol
     {
         public int IdRol { get; set; }
         public string Descripcion { get; set; }
