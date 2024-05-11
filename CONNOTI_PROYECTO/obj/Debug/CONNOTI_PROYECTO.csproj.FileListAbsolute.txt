@@ -70,3 +70,5 @@ C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CONNOTI_PROYECTO\bin\rosly
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CONNOTI_PROYECTO\bin\roslyn\System.Memory.dll
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CONNOTI_PROYECTO\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CONNOTI_PROYECTO\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CONNOTI_PROYECTO\bin\BCrypt.Net.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\CONNOTI_PROYECTO\bin\BCrypt.Net.xml

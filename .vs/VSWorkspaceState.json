@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CapaPresentacionAdmin",
     "\\CapaPresentacionAdmin\\Views",
-    "\\CapaPresentacionAdmin\\Views\\Home"
+    "\\CapaPresentacionAdmin\\Views\\Home",
+    "\\CONNOTI_PROYECTO"
   ],
-  "SelectedNode": "\\CapaPresentacionAdmin\\Views\\Home\\Usuarios.cshtml",
+  "SelectedNode": "\\CONNOTI_PROYECTO\\Web.config",
   "PreviewInSolutionExplorer": false
 }
