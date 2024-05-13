@@ -5,14 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using BCrypt.Net; // Importar BCrypt.Net
-using CONNOTI_PROYECTO.Utilidades;
 
 namespace CONNOTI_PROYECTO.Controllers
 {
-    public class UsuarioController : Controller
+    public class ProveedorController : Controller
     {
-        // GET: Usuario
+        // GET: Proveedor
         public ActionResult Crear()
         {
             return View();
@@ -20,24 +18,23 @@ namespace CONNOTI_PROYECTO.Controllers
 
         public JsonResult Obtener()
         {
-            List<Usuario> oListaUsuario = CD_Usuario.Instancia.ObtenerUsuarios();
-            return Json(new { data = oListaUsuario }, JsonRequestBehavior.AllowGet);
+            List<Proveedor> olista = CD_Proveedor.Instancia.ObtenerProveedor();
+            return Json(new { data = olista }, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
-        public JsonResult Guardar(Usuario objeto)
+        public JsonResult Guardar(Proveedor objeto)
         {
             bool respuesta = false;
 
-            if (objeto.IdUsuario == 0)
+            if (objeto.IdProveedor == 0)
             {
-                objeto.Clave = Encriptar.GetSHA256(objeto.Clave);
 
-                respuesta = CD_Usuario.Instancia.RegistrarUsuario(objeto);
+                respuesta = CD_Proveedor.Instancia.RegistrarProveedor(objeto);
             }
             else
             {
-                respuesta = CD_Usuario.Instancia.ModificarUsuario(objeto);
+                respuesta = CD_Proveedor.Instancia.ModificarProveedor(objeto);
             }
 
 
@@ -47,7 +44,7 @@ namespace CONNOTI_PROYECTO.Controllers
         [HttpGet]
         public JsonResult Eliminar(int id = 0)
         {
-            bool respuesta = CD_Usuario.Instancia.EliminarUsuario(id);
+            bool respuesta = CD_Proveedor.Instancia.EliminarProveedor(id);
 
             return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
         }

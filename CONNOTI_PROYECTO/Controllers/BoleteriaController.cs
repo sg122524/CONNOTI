@@ -5,14 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using BCrypt.Net; // Importar BCrypt.Net
-using CONNOTI_PROYECTO.Utilidades;
 
 namespace CONNOTI_PROYECTO.Controllers
 {
-    public class UsuarioController : Controller
+    public class BoleteriaController : Controller
     {
-        // GET: Usuario
+        // GET: Tienda
         public ActionResult Crear()
         {
             return View();
@@ -20,24 +18,23 @@ namespace CONNOTI_PROYECTO.Controllers
 
         public JsonResult Obtener()
         {
-            List<Usuario> oListaUsuario = CD_Usuario.Instancia.ObtenerUsuarios();
-            return Json(new { data = oListaUsuario }, JsonRequestBehavior.AllowGet);
+            List<BOLETERIAS> lista = CD_Boleteria.Instancia.ObtenerBoleteria();
+            return Json(new { data = lista }, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
-        public JsonResult Guardar(Usuario objeto)
+        public JsonResult Guardar(BOLETERIAS objeto)
         {
             bool respuesta = false;
 
-            if (objeto.IdUsuario == 0)
+            if (objeto.IdBoleteria == 0)
             {
-                objeto.Clave = Encriptar.GetSHA256(objeto.Clave);
 
-                respuesta = CD_Usuario.Instancia.RegistrarUsuario(objeto);
+                respuesta = CD_Boleteria.Instancia.RegistrarBoleteria(objeto);
             }
             else
             {
-                respuesta = CD_Usuario.Instancia.ModificarUsuario(objeto);
+                respuesta = CD_Boleteria.Instancia.ModificarBoleteria(objeto);
             }
 
 
@@ -47,7 +44,7 @@ namespace CONNOTI_PROYECTO.Controllers
         [HttpGet]
         public JsonResult Eliminar(int id = 0)
         {
-            bool respuesta = CD_Usuario.Instancia.EliminarUsuario(id);
+            bool respuesta = CD_Boleteria.Instancia.EliminarBoleteria(id);
 
             return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
         }

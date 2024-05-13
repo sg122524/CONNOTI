@@ -119,11 +119,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BoleteriaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
+    <Compile Include="Controllers\ConciertoController.cs" />
+    <Compile Include="Controllers\VentaController.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PermisosController.cs" />
+    <Compile Include="Controllers\ProveedorController.cs" />
+    <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Controllers\RolController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Filters\VerificarSession.cs" />
@@ -247,19 +253,19 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Scripts\Views\Categoria_Crear.js" />
+    <Content Include="Scripts\Views\Genero_Crear.js" />
     <Content Include="Scripts\Views\Cliente_Crear.js" />
     <Content Include="Scripts\Views\Compra_Consultar.js" />
     <Content Include="Scripts\Views\Compra_Crear.js" />
     <Content Include="Scripts\Views\Home_Index.js" />
     <Content Include="Scripts\Views\Permisos_Crear.js" />
-    <Content Include="Scripts\Views\Producto_Asignar.js" />
-    <Content Include="Scripts\Views\Producto_Crear.js" />
+    <Content Include="Scripts\Views\Concierto_Asignar.js" />
+    <Content Include="Scripts\Views\Concierto_Crear.js" />
     <Content Include="Scripts\Views\Proveedor_Crear.js" />
-    <Content Include="Scripts\Views\Reporte_Producto.js" />
+    <Content Include="Scripts\Views\Reporte_Concierto.js" />
     <Content Include="Scripts\Views\Reporte_Venta.js" />
     <Content Include="Scripts\Views\Rol_Crear.js" />
-    <Content Include="Scripts\Views\Tienda_Crear.js" />
+    <Content Include="Scripts\Views\Boleteria_Crear.js" />
     <Content Include="Scripts\Views\Usuario_Crear.js" />
     <Content Include="Scripts\Views\Venta_Consultar.js" />
     <Content Include="Scripts\Views\Venta_Crear.js" />
@@ -285,10 +291,21 @@
     <Content Include="Views\Genero\Crear.cshtml" />
     <Content Include="Views\Cliente\Crear.cshtml" />
     <Content Include="Views\Compra\Crear.cshtml" />
+    <Content Include="Views\Permisos\Crear.cshtml" />
+    <Content Include="Views\Concierto\Crear.cshtml" />
+    <Content Include="Views\Concierto\Asignar.cshtml" />
+    <Content Include="Views\Proveedor\Crear.cshtml" />
+    <Content Include="Views\Reporte\Concierto.cshtml" />
+    <Content Include="Views\Reporte\Ventas.cshtml" />
+    <Content Include="Views\Boleteria\Crear.cshtml" />
+    <Content Include="Views\Venta\Crear.cshtml" />
+    <Content Include="Views\Venta\Consultar.cshtml" />
+    <Content Include="Views\Venta\Documento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Default\" />
     <Folder Include="Views\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
