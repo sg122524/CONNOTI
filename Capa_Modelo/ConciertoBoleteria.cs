@@ -8,7 +8,7 @@ namespace Capa_Modelo
 {
     public class ConciertoBoleteria
     {
-        public int IdConciertoBoleteriaa { get; set; }
+        public int IdConciertoBoleteria { get; set; }
         public Concierto oConcierto { get; set; }
         public BOLETERIAS oBoleteria { get; set; }
         public int Stock { get; set; }

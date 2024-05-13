@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CONNOTI_PROYECTO"
+    "\\CONNOTI_PROYECTO",
+    "\\CONNOTI_PROYECTO\\Controllers"
   ],
-  "SelectedNode": "\\CONNOTIPROYECT.sln",
+  "SelectedNode": "\\CONNOTI_PROYECTO\\Controllers\\LoginController.cs",
   "PreviewInSolutionExplorer": false
 }
