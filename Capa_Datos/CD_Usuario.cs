@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
+using BCrypt.Net;
 
 
 namespace Capa_Datos
@@ -90,10 +91,10 @@ namespace Capa_Datos
                                                   Clave = dato.Element("Clave").Value,
 
                                               }).FirstOrDefault();
-                                rptUsuario.oProveedor = (from dato in doc.Element("Usuario").Elements("DetalleProveedor")
-                                                      select new Proveedor()
+                                rptUsuario.oBoleteria = (from dato in doc.Element("Usuario").Elements("DetalleBoleteria")
+                                                      select new BOLETERIAS()
                                                       {
-                                                          IdProveedor = int.Parse(dato.Element("IdProveedor").Value),
+                                                          IdBoleteria = int.Parse(dato.Element("IdBoleteria").Value),
                                                           Nombre = dato.Element("Nombre").Value,
                                                           NIT = dato.Element("NIT").Value,
                                                           Direccion = dato.Element("Direccion").Value,
@@ -142,7 +143,6 @@ namespace Capa_Datos
             }
         }
 
-
         public List<Usuario> ObtenerUsuarios()
         {
             List<Usuario> rptListaUsuario = new List<Usuario>();
@@ -165,7 +165,7 @@ namespace Capa_Datos
                             Apellidos = dr["Apellidos"].ToString(),
                             Correo = dr["Correo"].ToString(),
                             Clave = dr["Clave"].ToString(),
-                            IdProveedor = Convert.ToInt32(dr["IdProveedor"].ToString()),
+                            IdBoleteria = Convert.ToInt32(dr["IdTiIdBoleteriaenda"].ToString()),
                             IdRol = Convert.ToInt32(dr["IdRol"].ToString()),
                             oRol = new Rol() { Descripcion = dr["DescripcionRol"].ToString() },
                             Activo = Convert.ToBoolean(dr["Activo"])
@@ -198,7 +198,7 @@ namespace Capa_Datos
                     cmd.Parameters.AddWithValue("Apellidos", oUsuario.Apellidos);
                     cmd.Parameters.AddWithValue("Correo", oUsuario.Correo);
                     cmd.Parameters.AddWithValue("Clave", oUsuario.Clave);
-                    cmd.Parameters.AddWithValue("IdProveedor", oUsuario.IdProveedor);
+                    cmd.Parameters.AddWithValue("IdBoleteria", oUsuario.IdBoleteria);
                     cmd.Parameters.AddWithValue("IdRol", oUsuario.IdRol);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -234,7 +234,7 @@ namespace Capa_Datos
                     cmd.Parameters.AddWithValue("Apellidos", oUsuario.Apellidos);
                     cmd.Parameters.AddWithValue("Correo", oUsuario.Correo);
                     cmd.Parameters.AddWithValue("Clave", oUsuario.Clave);
-                    cmd.Parameters.AddWithValue("IdProveedor", oUsuario.IdProveedor);
+                    cmd.Parameters.AddWithValue("IdBoleteria", oUsuario.IdBoleteria);
                     cmd.Parameters.AddWithValue("IdRol", oUsuario.IdRol);
                     cmd.Parameters.AddWithValue("Activo", oUsuario.Activo);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;

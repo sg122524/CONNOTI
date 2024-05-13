@@ -8,14 +8,12 @@ namespace Capa_Modelo
 {
     public class DetalleVenta
     {
-        public int IdDetalleVenta { get; set; }
-        public Venta oVenta { get; set; }
-        public Concierto oConcierto { get; set; }
         public int Cantidad { get; set; }
-        public decimal PrecioComun { get; set; }
-        public decimal ImporteTotal { get; set; }
-        public bool Activo { get; set; }
-        public DateTime FechaRegistro { get; set; }
-        
+        public string NombreConcierto { get; set; }
+        public float PrecioUnidad { get; set; }
+        public string TextoPrecioUnidad { get; set; }
+        public float ImporteTotal { get; set; }
+        public string TextoImporteTotal { get; set; }
+
     }
 }

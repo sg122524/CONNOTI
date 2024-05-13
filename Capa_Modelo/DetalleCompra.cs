@@ -12,12 +12,12 @@ namespace Capa_Modelo
         public int IdCompra { get; set; }
         public Concierto oConcierto { get; set; }
         public int Cantidad { get; set; }
-        public decimal PrecioComun { get; set; }
-        public string PrecioVIP { get; set; }
-        public decimal PrecioUnitarioVenta { get; set; }
-        
+        public decimal PrecioUnitarioComun { get; set; }
+        public string TextoPrecioUnitarioComun { get; set; }
+        public decimal PrecioUnitarioVIP { get; set; }
+        public string TextoPrecioUnitarioVIP { get; set; }
         public decimal TotalCosto { get; set; }
-        
+        public string TextoTotalCosto { get; set; }
         public bool Activo { get; set; }
         public DateTime FechaRegistro { get; set; }
     }

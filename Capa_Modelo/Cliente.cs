@@ -15,6 +15,5 @@ namespace Capa_Modelo
         public string NumeroDocumento { get; set; }
         public string Telefono { get; set; }
         public bool Activo { get; set; }
-        public DateTime FechaRegistro { get; set; }
     }
 }

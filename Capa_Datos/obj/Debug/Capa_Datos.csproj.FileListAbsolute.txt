@@ -40,3 +40,6 @@ C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Datos\bin\Debug\rosly
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Datos\bin\Debug\roslyn\VBCSCompiler.exe.config
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Datos\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Datos\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Datos\bin\Debug\BCrypt.Net.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Datos\bin\Debug\BCrypt.Net.xml
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Datos\bin\Debug\Microsoft.Web.Infrastructure.dll

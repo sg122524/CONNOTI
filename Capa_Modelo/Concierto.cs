@@ -16,6 +16,5 @@ namespace Capa_Modelo
         public int IdGenero { get; set; }
         public Genero oGenero { get; set; }
         public bool Activo { get; set; }
-        public DateTime FechaRegistro { get; set; }
     }
 }

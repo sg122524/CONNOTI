@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace Capa_Modelo
 {
-    public class ConciertoProveedor
+    public class ConciertoBoleteria
     {
-        public int IdConciertoProveedor { get; set; }
+        public int IdConciertoBoleteriaa { get; set; }
         public Concierto oConcierto { get; set; }
-        public Proveedor oProveedor { get; set; }
+        public BOLETERIAS oBoleteria { get; set; }
         public int Stock { get; set; }
         public decimal PrecioComun { get; set; }
         public decimal PrecioVIP { get; set; }
         public bool Iniciado { get; set; }
-
-        public bool Activo { get; set;}
-        public DateTime FechaRegistro { get; set; }
     }
 }

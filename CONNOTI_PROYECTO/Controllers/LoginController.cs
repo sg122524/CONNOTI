@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BCrypt.Net; // Importar BCrypt.Net
-
+using CONNOTI_PROYECTO.Utilidades;
 
 namespace CONNOTI_PROYECTO.Controllers
 {
@@ -21,9 +21,10 @@ namespace CONNOTI_PROYECTO.Controllers
         [HttpPost]
         public ActionResult Index(string correo, string clave)
         {
-            Usuario ousuario = CD_Usuario.Instancia.ObtenerUsuarios().FirstOrDefault(u => u.Correo == correo);
 
-            if (ousuario == null || !BCrypt.Net.BCrypt.Verify(clave, ousuario.Clave))
+            Usuario ousuario = CD_Usuario.Instancia.ObtenerUsuarios().Where(u => u.Correo == correo && u.Clave == Encriptar.GetSHA256(clave)).FirstOrDefault();
+
+            if (ousuario == null)
             {
                 ViewBag.Error = "Usuario o contraseña no correcta";
                 return View();
@@ -33,5 +34,7 @@ namespace CONNOTI_PROYECTO.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+
     }
 }

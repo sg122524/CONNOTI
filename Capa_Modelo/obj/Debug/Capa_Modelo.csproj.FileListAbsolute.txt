@@ -38,3 +38,6 @@ C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\rosl
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\obj\Debug\Capa_Modelo.csproj.CopyComplete
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\BCrypt.Net.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\BCrypt.Net.xml
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\Microsoft.Web.Infrastructure.dll
