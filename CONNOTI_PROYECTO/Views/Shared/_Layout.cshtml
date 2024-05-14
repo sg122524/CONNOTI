@@ -1,4 +1,4 @@
-﻿
+﻿@using CONNOTI_PROYECTO.Helpers
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
     <meta http-equiv="Last-Modified" content="0">
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <title>Connoti Notificador de Conciertos</title>
+    <title>CONNOTI Online</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/PluginsCSS")
@@ -17,11 +17,9 @@
 </head>
 <body>
 
-
-    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-danger" style="font-weight:bold">
-
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-info" style="font-weight:bold">
         <a class="navbar-brand" href="#">
-            <img src="@Url.Content("~/Content/Images/logoconnoti.png")" width="110" height="65" alt="logo">
+            <img src="@Url.Content("~/Utilidades/Logo Banda de música Alegre Azul (1).png")" width="110" height="45" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,11 +28,11 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" name="Home" href="@Url.Action("Index", "Home")"><i class="fas fa-home"></i> Inicio</a>
-                    @*</li>
-                    @Html.ActionLinkAllow()
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://ouo.io/VRgLgZ" target="_blank"><i class="fas fa-hands-helping"></i> Click y ayudanos</a>
-                    </li>*@
+                </li>
+                @Html.ActionLinkAllow()
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ouo.io/VRgLgZ" target="_blank"><i class="fas fa-hands-helping"></i> Click y ayuda al Canal</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav ml-auto">
 
@@ -61,9 +59,117 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Content/PluginsJS")
+
+    <script type="text/javascript">
+
+        $.extend({ MisUrls: { url: {}, urls: function (a) { $.extend($.MisUrls.url, a); } } });
+
+        //CONTROLADOR ROL
+        $.MisUrls.urls({ _ObtenerRoles: '@Url.Action("Obtener", "Rol")' });
+        $.MisUrls.urls({ _GuardarRol: '@Url.Action("Guardar", "Rol")' });
+        $.MisUrls.urls({ _EliminarRol: '@Url.Action("Eliminar", "Rol")' });
+
+        //CONTROLADOR PERMISOS
+        $.MisUrls.urls({ _ObtenerPermisos: '@Url.Action("Obtener", "Permisos")' });
+        $.MisUrls.urls({ _GuardarPermisos: '@Url.Action("Guardar", "Permisos")' });
+
+
+        //CONTROLADOR USUARIO
+        $.MisUrls.urls({ _ObtenerUsuarios: '@Url.Action("Obtener", "Usuario")' });
+        $.MisUrls.urls({ _GuardarUsuario: '@Url.Action("Guardar", "Usuario")' });
+        $.MisUrls.urls({ _EliminarUsuario: '@Url.Action("Eliminar", "Usuario")' });
+
+        //CONTROLADOR PROVEEDOR
+        $.MisUrls.urls({ _ObtenerProveedores: '@Url.Action("Obtener", "Proveedor")' });
+        $.MisUrls.urls({ _GuardarProveedor: '@Url.Action("Guardar", "Proveedor")' });
+        $.MisUrls.urls({ _EliminarProveedor: '@Url.Action("Eliminar", "Proveedor")' });
+
+        //CONTROLADOR CATEGORIA
+        $.MisUrls.urls({ _ObtenerGeneros: '@Url.Action("Obtener", "Genero")' });
+        $.MisUrls.urls({ _GuardarGenero: '@Url.Action("Guardar", "Genero")' });
+        $.MisUrls.urls({ _EliminarGenero: '@Url.Action("Eliminar", "Genero")' });
+
+
+         //CONTROLADOR PRODUCTO
+        $.MisUrls.urls({ _ObtenerConciertos: '@Url.Action("Obtener", "Concierto")' });
+        $.MisUrls.urls({ _ObtenerConciertoPorBoleteria: '@Url.Action("ObtenerPorBoleteria", "Concierto")' });
+        $.MisUrls.urls({ _GuardarConcierto: '@Url.Action("Guardar", "Concierto")' });
+        $.MisUrls.urls({ _EliminarConcierto: '@Url.Action("Eliminar", "Concierto")' });
+        $.MisUrls.urls({ _ObtenerAsignaciones: '@Url.Action("ObtenerAsignaciones", "Concierto")' });
+        $.MisUrls.urls({ _RegistrarConciertoBoleteria: '@Url.Action("RegistrarConciertoBoleteria", "Concierto")' });
+        $.MisUrls.urls({ _ModificarConciertoBoleteria: '@Url.Action("ModificarConciertoBoleteria", "Concierto")' });
+        $.MisUrls.urls({ _EliminarConciertoBoleteria: '@Url.Action("EliminarConciertoBoleteria", "Concierto")' });
+
+
+        //CONTROLADOR TIENDA
+        $.MisUrls.urls({ _ObtenerBoleterias: '@Url.Action("Obtener", "Boleteria")' });
+        $.MisUrls.urls({ _GuardarBoleteria: '@Url.Action("Guardar", "Boleteria")' });
+        $.MisUrls.urls({ _EliminarBoleteria: '@Url.Action("Eliminar", "Boleteria")' });
+
+        //CONTROLADOR COMPRA
+        $.MisUrls.urls({ _ObtenerCompras: '@Url.Action("Obtener", "Compra")' });
+        $.MisUrls.urls({ _GuardarCompra: '@Url.Action("Guardar", "Compra")' });
+        $.MisUrls.urls({ _DocumentoCompra: '@Url.Action("Documento", "Compra")' });
+
+
+        //CONTROLADOR VENTA
+        $.MisUrls.urls({ _ObtenerUsuario: '@Url.Action("ObtenerUsuario", "Venta")' });
+        $.MisUrls.urls({ _ObtenerConciertoStockPorBoleteria: '@Url.Action("ObtenerConciertoPorBoleteria", "Venta")' });
+        $.MisUrls.urls({ _ControlarStockConcierto: '@Url.Action("ControlarStock", "Venta")' });
+        $.MisUrls.urls({ _RegistrarVenta: '@Url.Action("Guardar", "Venta")' });
+        $.MisUrls.urls({ _DocumentoVenta: '@Url.Action("Documento", "Venta")' });
+        $.MisUrls.urls({ _ObtenerVentas: '@Url.Action("Obtener", "Venta")' });
+
+        //CONTROLADOR REPORTE
+        $.MisUrls.urls({ _ObtenerReporteConcierto :'@Url.Action("ObtenerConcierto", "Reporte")' });
+        $.MisUrls.urls({ _ObtenerReporteVenta :'@Url.Action("ObtenerVenta", "Reporte")' });
+
+
+        //CONTROLADOR CLIENTE
+        $.MisUrls.urls({ _ObtenerClientes: '@Url.Action("Obtener", "Cliente")' });
+        $.MisUrls.urls({ _GuardarCliente: '@Url.Action("Guardar", "Cliente")' });
+        $.MisUrls.urls({ _EliminarCliente: '@Url.Action("Eliminar", "Cliente")' });
+
+
+        //lenguaje español datatable
+        $.MisUrls.urls({ Url_datatable_spanish: '@Url.Content("~/content/plugins/datatables/js/datatable_spanish.json")' });
+
+
+
+    </script>
+    <script>
+
+        function activarMenu(menuactivo) {
+
+            var ul = $("ul.navbar-nav");
+            ul.find("li.nav-item").each(function (i, li) {
+
+                var a;
+
+                if ($(li).find("div.dropdown-menu").length != 0) {
+
+                    var div = $($(li).find("div.dropdown-menu"))
+
+                    div.find("a.dropdown-item").each(function (x, tagA) {
+                        if ($(tagA).attr("name") == menuactivo) {
+
+                            $(li).addClass("active");
+                            return false;
+                        }
+                    })
+                } else {
+
+                    a = $(li).find("a.nav-link");
+
+                    if ($(a).attr("name") == menuactivo) {
+                        $(li).addClass("active");
+                        return false;
+                    }
+                }
+            });
+        }
+
+    </script>
+    @RenderSection("scripts", required: false)
 </body>
-
-   
-
-
 </html>

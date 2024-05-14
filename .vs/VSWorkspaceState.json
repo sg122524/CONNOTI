@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\CONNOTI_PROYECTO",
-    "\\CONNOTI_PROYECTO\\Controllers"
+    "\\CONNOTI_PROYECTO\\Controllers",
+    "\\CONNOTI_PROYECTO\\Views",
+    "\\CONNOTI_PROYECTO\\Views\\Compra"
   ],
-  "SelectedNode": "\\CONNOTI_PROYECTO\\Controllers\\LoginController.cs",
+  "SelectedNode": "\\CONNOTI_PROYECTO\\Views\\Compra\\Crear.cshtml",
   "PreviewInSolutionExplorer": false
 }
