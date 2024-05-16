@@ -18,6 +18,21 @@ namespace CONNOTI_PROYECTO.Controllers
             return View();
         }
 
+        public ActionResult Registrar()
+        {
+            return View();
+        }
+
+        public ActionResult Reestablecer()
+        {
+            return View();
+        }
+
+        public ActionResult CambiarClave()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Index(string correo, string clave)
         {
@@ -33,6 +48,15 @@ namespace CONNOTI_PROYECTO.Controllers
             Session["Usuario"] = ousuario;
 
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public ActionResult Registrar(Usuario usuario)
+        {
+            int resultado;
+            string mensaje;
+
+            return View();
         }
 
 

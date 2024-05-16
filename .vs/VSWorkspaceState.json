@@ -3,9 +3,12 @@
     "",
     "\\CONNOTI_PROYECTO",
     "\\CONNOTI_PROYECTO\\Controllers",
+    "\\CONNOTI_PROYECTO\\Scripts",
+    "\\CONNOTI_PROYECTO\\Scripts\\Views",
     "\\CONNOTI_PROYECTO\\Views",
-    "\\CONNOTI_PROYECTO\\Views\\Compra"
+    "\\CONNOTI_PROYECTO\\Views\\Compra",
+    "\\CONNOTI_PROYECTO\\Views\\Login"
   ],
-  "SelectedNode": "\\CONNOTI_PROYECTO\\Views\\Compra\\Crear.cshtml",
+  "SelectedNode": "\\CONNOTI_PROYECTO\\Views\\Login\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

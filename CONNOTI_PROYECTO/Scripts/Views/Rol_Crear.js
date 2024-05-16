@@ -78,42 +78,37 @@ function abrirPopUpForm(json) {
 
 
 function Guardar() {
-
+    console.log("Guardando...");
     if ($("#form").valid()) {
-
         var request = {
             objeto: {
                 IdRol: $("#txtid").val(),
                 Descripcion: $("#txtDescripcion").val(),
                 Activo: parseInt($("#cboEstado").val()) == 1 ? true : false
             }
-        }
+        };
 
-        jQuery.ajax({
+        $.ajax({
             url: $.MisUrls.url._GuardarRol,
             type: "POST",
             data: JSON.stringify(request),
             dataType: "json",
             contentType: "application/json; charset=utf-8",
             success: function (data) {
-
+                console.log("Guardado exitoso:", data.resultado);
                 if (data.resultado) {
                     tabladata.ajax.reload();
                     $('#FormModal').modal('hide');
                 } else {
-
-                    swal("Mensaje", "No se pudo guardar los cambios", "warning")
+                    swal("Mensaje", "No se pudo guardar los cambios", "warning");
                 }
             },
             error: function (error) {
-                console.log(error)
-            },
-            beforeSend: function () {
-
-            },
+                console.log("Error:", error);
+            }
         });
-
     }
+}
 
 }
 
