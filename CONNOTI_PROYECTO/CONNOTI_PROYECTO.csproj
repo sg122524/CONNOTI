@@ -176,7 +176,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Images\alcolirikoz.jpg" />
+    <Content Include="Content\Images\daniel.jpg" />
+    <Content Include="Content\Images\feid.jpg" />
+    <Content Include="Content\Images\karolg.jpg" />
     <Content Include="Content\Images\logoconnoti.png" />
+    <Content Include="Content\Images\penyair.jpg" />
+    <Content Include="Content\Images\quevedo.jpg" />
     <Content Include="Content\sweetalert.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

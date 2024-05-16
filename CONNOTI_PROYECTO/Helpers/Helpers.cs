@@ -24,7 +24,7 @@ namespace CONNOTI_PROYECTO.Helpers
                 Usuario rptUsuario = CD_Usuario.Instancia.ObtenerDetalleUsuario(oUsuario.IdUsuario);
 
 
-                foreach (Menu item in rptUsuario.oListaMenu)
+                foreach (Menu item in  rptUsuario.oListaMenu)
                 {
                     sb.AppendLine("<li class='nav-item dropdown'>");
                     sb.AppendLine("<a class='nav-link dropdown-toggle' href='#' data-toggle='dropdown'><i class='" + item.Icono + "'></i> " + item.Nombre + "</a>");

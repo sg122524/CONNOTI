@@ -9,6 +9,6 @@
     "\\CONNOTI_PROYECTO\\Views\\Compra",
     "\\CONNOTI_PROYECTO\\Views\\Login"
   ],
-  "SelectedNode": "\\CONNOTI_PROYECTO\\Views\\Login\\Index.cshtml",
+  "SelectedNode": "\\CONNOTI_PROYECTO\\Controllers\\RolController.cs",
   "PreviewInSolutionExplorer": false
 }
