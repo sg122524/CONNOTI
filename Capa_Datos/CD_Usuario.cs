@@ -17,7 +17,7 @@ namespace Capa_Datos
     {
         public static CD_Usuario _instancia = null;
 
-        private CD_Usuario()
+        public CD_Usuario()
         {
 
         }
@@ -186,6 +186,8 @@ namespace Capa_Datos
         }
 
 
+        
+
         public bool RegistrarUsuario(Usuario oUsuario)
         {
             bool respuesta = true;
@@ -220,6 +222,7 @@ namespace Capa_Datos
             return respuesta;
 
         }
+
 
         public bool ModificarUsuario(Usuario oUsuario)
         {

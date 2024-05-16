@@ -41,3 +41,15 @@ C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\obj\Debug\Capa
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\BCrypt.Net.dll
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\BCrypt.Net.xml
 C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\Konscious.Security.Cryptography.Blake2.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\System.Buffers.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\System.Memory.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\Konscious.Security.Cryptography.Argon2.xml
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\Konscious.Security.Cryptography.Blake2.xml
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\System.Buffers.xml
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\System.Memory.xml
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\saram\source\repos\CONNOTI\proyectosoftware1\Capa_Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

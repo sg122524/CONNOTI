@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using BCrypt.Net; // Importar BCrypt.Net
 using CONNOTI_PROYECTO.Utilidades;
 
 namespace CONNOTI_PROYECTO.Controllers
@@ -31,15 +30,13 @@ namespace CONNOTI_PROYECTO.Controllers
 
             if (objeto.IdUsuario == 0)
             {
-                objeto.Clave = Encriptar.GetSHA256(objeto.Clave);
-
+                objeto.Clave = Encriptar.HashPassword(objeto.Clave);
                 respuesta = CD_Usuario.Instancia.RegistrarUsuario(objeto);
             }
             else
             {
                 respuesta = CD_Usuario.Instancia.ModificarUsuario(objeto);
             }
-
 
             return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
         }
@@ -48,7 +45,6 @@ namespace CONNOTI_PROYECTO.Controllers
         public JsonResult Eliminar(int id = 0)
         {
             bool respuesta = CD_Usuario.Instancia.EliminarUsuario(id);
-
             return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
         }
     }

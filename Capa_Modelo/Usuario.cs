@@ -15,6 +15,7 @@ namespace Capa_Modelo
         public string Correo { get; set; }
         public string NombreUsuario { get; set; }
         public string Clave { get; set; }
+        public string ConfirmarClave { get; set; }
         public int IdBoleteria { get; set; }
         public BOLETERIAS oBoleteria { get; set; }
         public int IdRol { get; set; }
